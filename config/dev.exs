@@ -36,8 +36,7 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :phoenix_turbolinks, PhoenixTurbolinks.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "gaurav",
   database: "phoenix_turbolinks_dev",
   hostname: "localhost",
   pool_size: 10

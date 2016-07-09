@@ -9,3 +9,12 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+
+Enum.map(PhoenixTurbolinks.Repo.all(PhoenixTurbolinks.Item),
+  fn(item) -> PhoenixTurbolinks.Repo.delete!(item) end
+)
+
+Enum.map(1..100,
+  fn(x) -> PhoenixTurbolinks.Repo.insert!(%PhoenixTurbolinks.Item{ title: "Item #{x}" }) end
+)
